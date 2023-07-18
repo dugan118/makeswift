@@ -33,6 +33,8 @@ ReactRuntime.registerComponent(regBoard, {
 // --- EventSelector Component ---
 import EventSelector from '@/components/EventSelector'
 function regEventSelector(props) {
+  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+  console.log('props: ', props)
   return <EventSelector {...props}/>
 }
 ReactRuntime.registerComponent(regEventSelector, {
