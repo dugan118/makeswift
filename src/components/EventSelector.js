@@ -34,6 +34,8 @@ function GameCard( info , updateFocusedState){
 
 //props: method to set state of selected game in parent. 
 export default function EventSelector( props ) {
+    console.log('1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    console.log('props1: ', props)
     const [games, setGames] = useState([])
     //Make call to DB with filters, return filtered set
     async function getGames( filters ){
