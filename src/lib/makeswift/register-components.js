@@ -33,6 +33,8 @@ ReactRuntime.registerComponent(regBoard, {
 // --- EventSelector Component ---
 import EventSelector from '@/components/EventSelector'
 function regEventSelector(props) {
+    console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    console.log('props: ', props)
   return <EventSelector {...props}/>
 }
 ReactRuntime.registerComponent(regEventSelector, {
@@ -51,6 +53,19 @@ function regTopPanel(props) {
 ReactRuntime.registerComponent(regTopPanel, {
   type: 'TopPanel',
   label: 'TopPanel',
+  props: {
+    className: Style(),
+  },
+})
+
+// --- Header Component ---
+import Header from '@/components/Header'
+function regHeader(props) {
+  return <Header {...props}/>
+}
+ReactRuntime.registerComponent(regHeader, {
+  type: 'Header',
+  label: 'Header',
   props: {
     className: Style(),
   },
