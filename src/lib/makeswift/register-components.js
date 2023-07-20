@@ -51,7 +51,7 @@ function regTopPanel(props) {
   return <TopPanel {...props}/>
 }
 ReactRuntime.registerComponent(regTopPanel, {
-  type: 'custom/TopPanel',
+  type: 'TopPanel',
   label: 'custom/TopPanel',
   props: {
     className: Style(),
@@ -64,7 +64,7 @@ function regHeader(props) {
   return <Header {...props}/>
 }
 ReactRuntime.registerComponent(regHeader, {
-  type: 'custom/customHeader',
+  type: 'customHeader',
   label: 'custom/customHeader',
   props: {
     className: Style(),
