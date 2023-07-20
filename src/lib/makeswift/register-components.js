@@ -70,3 +70,17 @@ ReactRuntime.registerComponent(regHeader, {
     className: Style(),
   },
 })
+
+
+// --- importButton Component ---
+import importButton from '@/components/UpdateGamesButton'
+function regimportButton(props) {
+  return <importButton {...props}/>
+}
+ReactRuntime.registerComponent(regimportButton, {
+  type: 'importButton',
+  label: 'custom/importButton',
+  props: {
+    className: Style(),
+  },
+})
