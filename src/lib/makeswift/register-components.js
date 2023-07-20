@@ -57,16 +57,3 @@ ReactRuntime.registerComponent(regTopPanel, {
     className: Style(),
   },
 })
-
-// --- Header Component ---
-import Header from '@/components/Header'
-function regHeader(props) {
-  return <Header {...props}/>
-}
-ReactRuntime.registerComponent(regHeader, {
-  type: 'Header',
-  label: 'Header',
-  props: {
-    className: Style(),
-  },
-})
