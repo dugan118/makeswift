@@ -4,18 +4,18 @@ import { ReactRuntime } from '@makeswift/runtime/react'
 import { Style } from '@makeswift/runtime/controls'
 
 
-// --- Test Box ---
-import Box from '@/components/Test'
-function HelloWorld() {
-  return <Box />
-}
-ReactRuntime.registerComponent(HelloWorld, {
-  type: 'testComp',
-  label: 'testComp',
-  props: {
-    className: Style(),
-  },
-})
+// // --- Test Box ---
+// import Box from '@/components/Test'
+// function HelloWorld() {
+//   return <Box />
+// }
+// ReactRuntime.registerComponent(HelloWorld, {
+//   type: 'testComp',
+//   label: 'testComp',
+//   props: {
+//     className: Style(),
+//   },
+// })
 
 // --- Board Component ---
 import Board from '@/components/Board'
@@ -64,8 +64,8 @@ function regHeader(props) {
   return <Header {...props}/>
 }
 ReactRuntime.registerComponent(regHeader, {
-  type: 'Header',
-  label: 'Header',
+  type: 'customHeader',
+  label: 'customHeader',
   props: {
     className: Style(),
   },
