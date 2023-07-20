@@ -7,7 +7,7 @@ export default function UpdateGamesButton(){
 
     return(
 
-        <button onClick={add25} className="rounded outline-2">
+        <button onClick={add25} className=" w-20 h-8 rounded outline-2">
             Click Me
         </button>
     )
