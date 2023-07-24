@@ -12,26 +12,11 @@ export default async function handler(req, res) {
         password: process.env.PGSQL_PASSWORD,
       });
     await client.connect();
-    //filters: date, ( later: sport, league, team_name, )
-    const DEFAULT_DATE = "2022-10-18"
-    
-    //const { searchParams } = req.nextUrl
-    //console.log('searchParams: ', searchParams)
  
     console.log('req : ', req)
-    console.log('res : ', res)
 
-    let date
-    if(req.body.date){
-        console.log('full req.body: ',req.body)
-        date = req.body.date
-    }else{
-        console.log('empty req.body: ',req.body)
-        date = DEFAULT_DATE
-    }
 
-    const result = await client.query("SELECT * FROM sport_games WHERE date_of_event=$1",[date])
     await client.end();
-    res.status(200).json(result.rows);
+    res.status(200).json("hello");
   }
   
