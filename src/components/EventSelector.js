@@ -47,6 +47,7 @@ export default function EventSelector( props ) {
             })
             .then((res) => res.json())
             .then((data) => {
+                console.log('setGames: ', data)
                 setGames(data)
             })
         }else{
