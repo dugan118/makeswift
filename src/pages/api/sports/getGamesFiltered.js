@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     
     console.log('typeof req: ', typeof req)
  
-    //console.log('req : ', req)
+    console.log('req : ', req)
 
     let date
     if(req.body.date){
