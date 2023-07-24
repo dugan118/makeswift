@@ -18,6 +18,7 @@ export default NextAuth({
             password: { label: "Password", type: "password" }
           },
         async authorize(credentials, req) {
+          console.log('start authorize')
             const res = await fetch("http://localhost:3000/api/loginHelper", {
                 method: 'POST',
                 body: JSON.stringify(credentials),
@@ -27,6 +28,8 @@ export default NextAuth({
             
         
               // If no error and we have user data, return it
+              console.log('res.ok : ', res.ok)
+              console.log('user.data: ', user.data)
               
               if (res.ok && user.data) {
                 console.log("user in ...nextAuth");
@@ -42,7 +45,7 @@ export default NextAuth({
   ],
 
   callbacks: {
-    jwt({ token, account, user }) {
+    async jwt({ token, account, user }) {
       if (account) {
         token.accessToken = account.access_token;
         token.id = user?.id;
@@ -53,7 +56,7 @@ export default NextAuth({
       }
       return token
     },
-    session({ session, token }) {
+    async session({ session, token }) {
         session.user.id = token.id;
         session.user.name = token.name;
         session.user.img = token.img;

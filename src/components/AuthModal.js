@@ -5,13 +5,18 @@ import { signIn } from "next-auth/react"
 
 
 
-const handleLogin =  (e) => {
+const handleLogin = async (e) => {
     e.preventDefault();
-    const res = signIn("credentials", {
+    console.log('username: ', document.getElementById("input-username-for-credentials-provider").value)
+    console.log('password: ', document.getElementById("input-password-for-credentials-provider").value)
+    
+    const res = await signIn("credentials", {
         username: document.getElementById("input-username-for-credentials-provider").value,
         password: document.getElementById("input-password-for-credentials-provider").value,
         redirect: false,
       });
+    console.log('end', res)
+      
 
     //display err msg if incorrect creds
 }
