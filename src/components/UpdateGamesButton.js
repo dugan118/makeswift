@@ -1,6 +1,6 @@
 
 function add25(){
-    fetch(API_HOST+"/api/sports/updateDB")
+    fetch("/api/sports/updateDB")
 }
 
 export default function UpdateGamesButton(){

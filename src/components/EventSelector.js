@@ -40,7 +40,7 @@ export default function EventSelector( props ) {
         //filters: team_name, date, sport, league,
         if(!filters){
             console.log('default call')
-            fetch(API_HOST+"/api/sports/getGamesFiltered", {
+            fetch("/api/sports/getGamesFiltered", {
                 method: 'POST',
                 //body: JSON.stringify(data),
                 headers: { "Content-Type": "application/json" }
@@ -55,7 +55,7 @@ export default function EventSelector( props ) {
             const data = {
                 date: filters,
             }
-            fetch(API_HOST+"/api/sports/getGamesFiltered", {
+            fetch("/api/sports/getGamesFiltered", {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { "Content-Type": "application/json" }

@@ -35,7 +35,7 @@ export default function CreatePool(){
             'espn_id' : selectedGame,
         }
         //api call to create pool
-        const res = await fetch(API_HOST+"/api/pools/createPool", {
+        const res = await fetch("/api/pools/createPool", {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { "Content-Type": "application/json" }
