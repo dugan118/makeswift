@@ -1,4 +1,5 @@
 import { Client } from 'pg';
+import { useRouter } from "next/router";
 
 export default async function handler(req, res) {
     let ret
@@ -12,8 +13,9 @@ export default async function handler(req, res) {
     await client.connect();
     //filters: date, ( later: sport, league, team_name, )
     const DEFAULT_DATE = "2022-10-18"
-
-  console.log('req.query : ', req.query)
+    
+    const router = useRouter();
+    console.log('req.query : ', router.query)
 
     let date
     if(req.body.date){
