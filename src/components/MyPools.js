@@ -39,6 +39,7 @@ export default function MyPools(){
     //or push to new component "card" with pool info(preview?)
 
     const renderPools = () => {
+        console.log('renderPools: ', pools)
         let ret = [];
  
         pools.map( (pool) => {
