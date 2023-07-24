@@ -13,6 +13,7 @@ export default async function handler(req, res) {
       });
     await client.connect();
     //filters: date, ( later: sport, league, team_name, )
+    console.log('req : ', req)
 
     const result = await client.query("SELECT * FROM sport_games")
     await client.end();
