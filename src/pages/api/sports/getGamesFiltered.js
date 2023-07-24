@@ -14,8 +14,7 @@ export default async function handler(req, res) {
     //filters: date, ( later: sport, league, team_name, )
     const DEFAULT_DATE = "2022-10-18"
     
-    const { searchParams } = new URL(req.url)
-    console.log('searchParams:',searchParams)
+    console.log('typeof req: ', typeof req)
  
     //console.log('req : ', req)
 
