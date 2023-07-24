@@ -1,6 +1,7 @@
 import { Client } from 'pg';
 
 
+
 export default async function handler(req, res) {
     let ret
     const client = new Client({
@@ -14,9 +15,10 @@ export default async function handler(req, res) {
     //filters: date, ( later: sport, league, team_name, )
     const DEFAULT_DATE = "2022-10-18"
     
-    console.log('typeof req: ', typeof req)
+    const {searchParams} = req.nextUrl
+    console.log('searchParams: ', searchParams)
  
-    console.log('req : ', req)
+    //console.log('req : ', req)
 
     let date
     if(req.body.date){
