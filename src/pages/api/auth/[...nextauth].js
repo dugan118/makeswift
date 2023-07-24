@@ -12,6 +12,7 @@ export default NextAuth({
     //email/password sign in
     CredentialsProvider({
         // The name to display on the sign in form (e.g. 'Sign in with...')
+        id: 'credentials',
         name: 'Email',
         credentials: {
             username: { label: "Username", type: "text", placeholder: "email" },

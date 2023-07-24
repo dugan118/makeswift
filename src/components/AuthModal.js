@@ -9,10 +9,11 @@ const handleLogin = async (e) => {
     e.preventDefault();
     console.log('username: ', document.getElementById("input-username-for-credentials-provider").value)
     console.log('password: ', document.getElementById("input-password-for-credentials-provider").value)
-    
+    let username = document.getElementById("input-username-for-credentials-provider").value
+    let password = document.getElementById("input-password-for-credentials-provider").value
     const res = await signIn("credentials", {
-        username: document.getElementById("input-username-for-credentials-provider").value,
-        password: document.getElementById("input-password-for-credentials-provider").value,
+        username,
+        password,
         redirect: false,
       });
     console.log('end', res)
