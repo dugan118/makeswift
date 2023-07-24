@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     //filters: date, ( later: sport, league, team_name, )
     const DEFAULT_DATE = "2022-10-18"
 
-    //console.log('req.body : ', req)
+  console.log('req.query : ', req.query)
 
     let date
     if(req.body.date){
