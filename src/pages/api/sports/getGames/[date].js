@@ -12,8 +12,8 @@ export default async function handler(req, res) {
         password: process.env.PGSQL_PASSWORD,
       });
     await client.connect();
- 
-    console.log('req : ', req)
+
+    console.log('req.query : ', req.query)
 
 
     await client.end();
