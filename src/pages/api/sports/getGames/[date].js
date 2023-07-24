@@ -15,8 +15,10 @@ export default async function handler(req, res) {
 
     console.log('req.query : ', req.query)
 
-
+    let date = req.query.date
+    const result = await client.query("SELECT * FROM sport_games WHERE date_of_event=$1",[date])
+    
     await client.end();
-    res.status(200).json("hello");
+    res.status(200).json(result.rows);
   }
   
