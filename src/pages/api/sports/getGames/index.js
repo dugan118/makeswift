@@ -13,23 +13,8 @@ export default async function handler(req, res) {
       });
     await client.connect();
     //filters: date, ( later: sport, league, team_name, )
-    const DEFAULT_DATE = "2022-10-18"
-    
-    const { searchParams } = req.nextUrl
-     console.log('searchParams: ', searchParams)
- 
-    //console.log('req : ', req)
 
-    let date
-    if(req.body.date){
-        console.log('full req.body: ',req.body)
-        date = req.body.date
-    }else{
-        console.log('empty req.body: ',req.body)
-        date = DEFAULT_DATE
-    }
-
-    const result = await client.query("SELECT * FROM sport_games WHERE date_of_event=$1",[date])
+    const result = await client.query("SELECT * FROM sport_games")
     await client.end();
     res.status(200).json(result.rows);
   }

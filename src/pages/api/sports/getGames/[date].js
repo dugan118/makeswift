@@ -15,10 +15,11 @@ export default async function handler(req, res) {
     //filters: date, ( later: sport, league, team_name, )
     const DEFAULT_DATE = "2022-10-18"
     
-    const { searchParams } = req.nextUrl
-     console.log('searchParams: ', searchParams)
+    //const { searchParams } = req.nextUrl
+    //console.log('searchParams: ', searchParams)
  
-    //console.log('req : ', req)
+    console.log('req : ', req)
+    console.log('res : ', res)
 
     let date
     if(req.body.date){

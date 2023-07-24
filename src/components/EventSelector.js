@@ -55,7 +55,7 @@ export default function EventSelector( props ) {
             const data = {
                 date: filters,
             }
-            fetch('/api/sports/getGamesFiltered?filters=${filters}', {
+            fetch('/api/sports/getGames/${filters}', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: { "Content-Type": "application/json" }
