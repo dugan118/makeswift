@@ -24,7 +24,7 @@ export default function MyPools(){
         const data = {
             'user_id': session? session.user.id: 0, //defaults to userid=0
         };
-        fetch("http://localhost:3000/api/pools/getMyPools", {
+        fetch(API_HOST+"/api/pools/getMyPools", {
             method: 'POST',
             body: JSON.stringify(data),
             headers: { "Content-Type": "application/json" }

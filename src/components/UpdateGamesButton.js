@@ -1,6 +1,6 @@
 
 function add25(){
-    fetch("http://localhost:3000/api/sports/updateDB")
+    fetch(API_HOST+"/api/sports/updateDB")
 }
 
 export default function UpdateGamesButton(){

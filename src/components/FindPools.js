@@ -8,7 +8,7 @@ export default function FindPools(){
 
 
     useEffect(() =>{    //pull pool data from database WHERE id = userid
-        fetch("http://localhost:3000/api/pools/getOpenPools", {
+        fetch(API_HOST+"/api/pools/getOpenPools", {
             method: 'POST',
             body: JSON.stringify(""),
             headers: { "Content-Type": "application/json" }

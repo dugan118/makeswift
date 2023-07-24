@@ -16,7 +16,7 @@ export async function updateBoughtCellsServer(props, selectedCells){
     selectedCells,
   }
 
-  const res = await fetch("http://localhost:3000/api/pools/buyCell", {
+  const res = await fetch(API_HOST+"/api/pools/buyCell", {
     method: 'POST',
     body: JSON.stringify(ret),
     headers: { "Content-Type": "application/json" }

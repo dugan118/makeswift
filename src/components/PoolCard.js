@@ -12,7 +12,7 @@ export default function PoolCard( props ){
         const data = {
             'pool_id': props.pool_id, //defaults to userid=0
         };
-        fetch("http://localhost:3000/api/pools/getPoolInfo", {
+        fetch(API_HOST+"/api/pools/getPoolInfo", {
             method: 'POST',
             body: JSON.stringify(data),
             headers: { "Content-Type": "application/json" }
@@ -24,7 +24,7 @@ export default function PoolCard( props ){
 
             const data1 = { espn_id: data[0].espn_id }
             console.log('data1: ',data1)
-            fetch("http://localhost:3000/api/sports/getSportGame", {
+            fetch(API_HOST+"/api/sports/getSportGame", {
                 method: 'POST',
                 body: JSON.stringify(data1),
                 headers: { "Content-Type": "application/json" }

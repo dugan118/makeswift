@@ -15,7 +15,7 @@ const handleSubmit = async () => {
         'password': document.getElementById('input-password-for-credentials-provider').value,
     }
 
-    const res = await fetch("http://localhost:3000/api/signupHelper", {
+    const res = await fetch(API_HOST+"/api/signupHelper", {
             method: 'POST',
             body: JSON.stringify(credentials),
             headers: { "Content-Type": "application/json" }
