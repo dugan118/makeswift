@@ -19,7 +19,7 @@ export default NextAuth({
           },
         async authorize(credentials, req) {
           console.log('start authorize')
-            const res = await fetch("http://localhost:3000/api/loginHelper", {
+            const res = await fetch("/api/loginHelper", {
                 method: 'POST',
                 body: JSON.stringify(credentials),
                 headers: { "Content-Type": "application/json" }
