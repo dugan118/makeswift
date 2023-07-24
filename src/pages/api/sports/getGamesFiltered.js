@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     const DEFAULT_DATE = "2022-10-18"
     
  
-    console.log('req.query : ', req.query)
+    console.log('req : ', req)
 
     let date
     if(req.body.date){
